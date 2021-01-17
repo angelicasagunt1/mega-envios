@@ -1,25 +1,2 @@
-<?php
-
-
-?>
-
-   <?php
-if ($mercantil == 0) {
-	echo "Nada!";
-} else {
-	echo $mercantil;
-}
-
-?></b> Bss. 
-
-  
-
-</body>
-
-<!--<script src="jquery/jquery-3.3.1.min.js"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
--->
+<?php ($mercantil == 0) ? "Nada!": print  number_format($mercantil,2,',','.'); ?>
 

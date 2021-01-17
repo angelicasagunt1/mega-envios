@@ -7,7 +7,7 @@
 if ($bbva == 0) {
 	echo "Nada!";
 } else {
-	echo $bbva;
+	echo number_format($bbva,2,',','.');
 }
 
 ?></b> Pesos

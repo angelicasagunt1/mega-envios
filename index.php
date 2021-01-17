@@ -41,6 +41,7 @@ include 'model/transferencias_model.php';
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
@@ -306,8 +307,7 @@ include 'model/transferencias_model.php';
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><div><?php include 'templates/mercantil.php'?></div></h3>
-
+                <div><h2><?php include 'templates/mercantil.php'?>Bs.</h2></div>
                 <p>Mercantil</p>
               </div>
               <div class="icon">
@@ -325,9 +325,7 @@ include 'model/transferencias_model.php';
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>  <div><?php include 'templates/banesco.php'?></div>
-<sup style="font-size: 20px"></sup></h3>
-
+                <div><h2><?php include 'templates/banesco.php'?></h2></div>
                 <p>Banesco</p>
               </div>
               <div class="icon">
@@ -341,8 +339,7 @@ include 'model/transferencias_model.php';
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3><div><?php include 'templates/otrosbancos.php'?></div></h3>
-
+                <div><h2><?php include 'templates/otrosbancos.php'?></h2></div>
                 <p>Otros Bancos</p>
               </div>
               <div class="icon">
@@ -356,8 +353,7 @@ include 'model/transferencias_model.php';
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3><?php include 'templates/efectivo.php'?></h3>
-
+                <h2><?php include 'templates/efectivo.php'?></h2>
                 <p>Efectivo</p>
               </div>
               <div class="icon">
