@@ -7,7 +7,7 @@
 if ($santander == 0) {
 	echo "Nada!";
 } else {
-	echo $santander;
+	echo number_format($santander,2,',','.');
 }
 
 ?></b> Pesos

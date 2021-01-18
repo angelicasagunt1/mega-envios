@@ -7,7 +7,7 @@
 if ($uala == 0) {
 	echo "Nada!";
 } else {
-	echo $uala;
+	echo number_format($uala,2,',','.');
 }
 
 ?></b> Pesos

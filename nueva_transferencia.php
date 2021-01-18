@@ -372,11 +372,14 @@ include 'model/transferencias_model.php';
         <!-- /.row -->
         <!-- Main row -->
         <div class="row">
-
+          <div style="margin-left: 80px">
+              <input type="text" name="caja_busqueda" id="caja_busqueda" placeholder="Buscar Cliente"></input>
+              <input type="submit" id="enviar" value="Buscar"></input>
+          </div>
               <!-- =========================================================== -->
     
-<iframe align="center" width="100%" height="650px" src="<?='templates/crear_cliente.php';?>" 
-  frameborder="no" scrolling="yes" name="myIframe" id="myIframe"> </iframe>
+          <iframe align="center" id="iframename" width="100%" height="650px" src="<?='templates/crear_cliente.php';?>" 
+          frameborder="no" scrolling="yes" name="myIframe" id="myIframe"> </iframe>
 
 
 
@@ -441,10 +444,17 @@ include 'model/transferencias_model.php';
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+   
+        $('#enviar').click(function(event) {
+            let word = $('#caja_busqueda').val();
+            $('#iframename').attr("src", "templates/crear_cliente.php?search=" + word);
+            console.log($('#iframename').attr("src"));
+        });
 
-
-
-
+    });
+</script>
 
 </body>
 </html>

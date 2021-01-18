@@ -102,7 +102,19 @@ tr: {font-size:  13px !important;}
 
                 <?php
 $result = mysqli_query($conn, "SELECT * FROM cliente");
+
+if(isset($_GET['search']) && !empty($_GET['search'])){
+
+    $q = $_GET['search'];
+    $result = mysqli_query($conn, "SELECT * FROM cliente WHERE nombre_cliente LIKE '%$q%' OR apellido_cliente LIKE '%$q%' OR telefono_cliente LIKE '%$q%' OR DNI LIKE '%$q%' OR codigo LIKE '%$q%'");
+}
 $i = 1;
+
+    $row_cnt = mysqli_num_rows($result);
+
+if($row_cnt == 0){
+    echo "La busqueda ingresada no concuerda con ningun cliente";exit;
+}
 while ($row = mysqli_fetch_array($result)) {
     ?>
                 <tr id="<?php echo $row["id_cliente"]; ?>">

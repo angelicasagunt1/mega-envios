@@ -7,7 +7,7 @@
 if ($mercado_pago == 0) {
 	echo "Nada!";
 } else {
-	echo $mercado_pago;
+	echo number_format($mercado_pago,2,',','.');
 }
 
 ?></b> Pesos
