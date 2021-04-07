@@ -26,10 +26,12 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `banco`
 --
+CREATE DATABASE envios;
+USE envios;
 
 CREATE TABLE `banco` (
   `id_banco` int(11) NOT NULL,
-  `tipo_banco` varchar(10) DEFAULT NULL
+  `tipo_banco` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -39,35 +41,35 @@ CREATE TABLE `banco` (
 INSERT INTO `banco` (`id_banco`, `tipo_banco`) VALUES
 (1, 'Banesco'),
 (2, 'Mercantil'),
+(3, 'Bancaribe'),
 (4, 'Activo'),
-(5, 'Agricola d'),
+(5, 'Agricola de Venezuela'),
 (6, 'Bancamiga'),
 (7, 'Bancrecer'),
 (8, 'Banorte'),
 (9, 'Banplus'),
-(10, 'BFC Fondo '),
-(11, 'Bicentenar'),
+(10, 'BFC Fondo Comun'),
+(11, 'Bicentenario'),
 (12, 'Bangente'),
-(13, 'Caroni '),
-(15, 'Central de'),
-(16, 'Citibank N'),
-(17, 'De la Fuer'),
+(13, 'Caroni'),
+(14, 'Occidental de Descuento'),
+(15, 'Central de Venezuela'),
+(16, 'Citibank Venezuela'),
+(17, 'De la Fuera Armada'),
 (18, 'Del Caribe'),
 (19, 'Del Sur'),
-(20, 'Espirito S'),
+(20, 'Espirito Santo'),
 (21, 'Exterior'),
 (22, 'Guayana'),
-(23, 'Instituto '),
-(24, 'Internacio'),
-(25, 'Mi, Desarr'),
-(26, 'Nacional d'),
+(24, 'Internacional de Desarrollo'),
+(26, 'Nacional de credito'),
 (27, 'Occidental'),
 (28, 'Plaza'),
 (29, 'Provincial'),
 (30, 'Sofitasa'),
 (31, 'Tesoro'),
-(32, 'Venezuela'),
-(33, 'Venezolano');
+(32, 'De Venezuela'),
+(33, 'Venezolano de Credito');
 
 -- --------------------------------------------------------
 
@@ -102,7 +104,7 @@ CREATE TABLE `cuenta` (
   `id_cliente` int(11) DEFAULT NULL,
   `id_tipo_banco` int(11) DEFAULT NULL,
   `num_cuenta` varchar(255) DEFAULT NULL,
-  `nombre_titular_cuenta` varchar(20) DEFAULT NULL,
+  `nombre_titular_cuenta` varchar(255) DEFAULT NULL,
   `apellido_titular_cuenta` varchar(20) DEFAULT NULL,
   `cedula_titular_cuenta` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -147,7 +149,10 @@ INSERT INTO `medios_de_pago` (`id_medios_de_pago`, `medio_de_pago`) VALUES
 (2, 'MERCADO PAGO'),
 (3, 'SANTANDER'),
 (4, 'BBVA'),
-(5, 'EFECTIVO');
+(5, 'EFECTIVO'),
+(6, 'BRUBANK'),
+(7, 'GALICIA'),
+(8, 'MACRO');
 
 -- --------------------------------------------------------
 

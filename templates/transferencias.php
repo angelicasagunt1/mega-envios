@@ -14,7 +14,9 @@ a.importe_titular,
 a.importe_cliente,
 c.medio_de_pago,
 e.nombre_cliente,
-e.codigo
+e.codigo,
+e.nombre_cliente,
+e.dni
 from transferencias as a
 left join cuenta as b on a.id_cuenta_destino = b.id_cuenta
 inner join medios_de_pago as c on c.id_medios_de_pago = a.id_medio_pago_cliente
@@ -151,6 +153,8 @@ tr:nth-child(even) {background-color: #f2f2f2;}
        <th>Pesos</th>
        <th>Bolívares</th>
        <th>Medio</th>
+       <th>Nombre Cliente</th>
+       <th>DNI Cliente </th>
        <th>Editar</th>
       </tr>
     </thead>
@@ -167,6 +171,8 @@ while ($row = mysqli_fetch_array($result)) {
             <td><?php echo $row["importe_titular"]; ?> </td>
             <td><b><?php echo $row["importe_cliente"]; ?></b> </td>
             <td><?php echo $row["medio_de_pago"]; ?> </td>
+            <td><?php echo $row["nombre_cliente"]; ?> </td>
+            <td><?php echo $row["dni"]; ?> </td>
             <td><a href="#" id="<?php echo $row["id_transferencia"]; ?>" class="delbutton" title="Presiona para borrar">Eliminar</a></td>
           </tr>
           <?php
