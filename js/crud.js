@@ -25,11 +25,13 @@
 		var apellido=$(this).attr("data-apellido");
 		var telefono=$(this).attr("data-telefono");
 		var dni=$(this).attr("data-dni");
+		var codigo=$(this).attr("data-codigo");
 		$('#id_u').val(id);
 		$('#name_u').val(name);
 		$('#apellido_u').val(apellido);
 		$('#telefono_u').val(telefono);
 		$('#dni_u').val(dni);
+		$('#codigo_u').val(codigo);
 	});
 	
 	$(document).on('click','#update',function(e) {

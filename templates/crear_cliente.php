@@ -130,12 +130,13 @@ while ($row = mysqli_fetch_array($result)) {
                     <td><?php echo $row["id_cliente"]; ?></td>
                     <td><b><?php echo $row["codigo"]; ?></b> </td> 
                     <td><?php echo $row["nombre_cliente"]; ?></td>
-                   <td><?php echo $row["telefono_cliente"]; ?></td>
+                    <td><?php echo $row["telefono_cliente"]; ?></td>
                     <td><?php echo $row["dni"]; ?></td>
                     <td>
                         <a href="#editEmployeeModal" class="edit" data-toggle="modal">
                             <i class="material-icons update" data-toggle="tooltip"
                             data-id="<?php echo $row["id_cliente"]; ?>"
+                            data-codigo="<?php echo $row["codigo"]; ?>"
                             data-name="<?php echo $row["nombre_cliente"]; ?>"
                             data-apellido="<?php echo $row["apellido_cliente"]; ?>"
                             data-telefono="<?php echo $row["telefono_cliente"]; ?>"
@@ -166,7 +167,7 @@ $i++;
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Código</label>
-                            <input type="text" id="id_cliente" name="codigo" class="form-control" required>
+                            <input type="text" id="codigo" name="codigo" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Nombre y Apellido</label>
@@ -221,12 +222,11 @@ $i++;
                             <label>DNI</label>
                             <input type="city" id="dni_u" name="dni" class="form-control" required>
                         </div>
-
+    
                          <div class="form-group">
                             <label>Código</label>
-                            <input type="text" id="id_cliente" name="codigo" class="form-control" required>
-
-                            
+                            <input type="text" id="codigo_u" name="codigo" class="form-control" required>
+                        
                         </div>
 
                     </div>

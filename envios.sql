@@ -82,7 +82,7 @@ CREATE TABLE `cliente` (
   `codigo` varchar(20) DEFAULT NULL,
   `nombre_cliente` varchar(20) DEFAULT NULL,
   `apellido_cliente` varchar(20) DEFAULT NULL,
-  `telefono_cliente` int(11) DEFAULT NULL,
+  `telefono_cliente` varchar(255) DEFAULT NULL,
   `dni` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -152,7 +152,10 @@ INSERT INTO `medios_de_pago` (`id_medios_de_pago`, `medio_de_pago`) VALUES
 (5, 'EFECTIVO'),
 (6, 'BRUBANK'),
 (7, 'GALICIA'),
-(8, 'MACRO');
+(8, 'MACRO'),
+(9, 'REBANKING'),
+(10,'ICBC'),
+(11,'NARANJA');
 
 -- --------------------------------------------------------
 

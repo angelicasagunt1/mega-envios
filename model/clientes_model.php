@@ -28,8 +28,9 @@ if (count($_POST) > 0) {
 		$apellido = $_POST['apellido'];
 		$telefono = $_POST['telefono'];
 		$dni = $_POST['dni'];
+		$codigo = $_POST['codigo'];
 		// ,`apellido_cliente`='$apellido',`telefono_cliente`='$telefono',`dni`='$dni'
-		$sql = "UPDATE cliente SET nombre_cliente='$name', apellido_cliente='$apellido', telefono_cliente = '$telefono', dni= '$dni' WHERE id_cliente=$id";
+		$sql = "UPDATE cliente SET nombre_cliente='$name', apellido_cliente='$apellido', telefono_cliente = '$telefono', dni= '$dni', codigo= '$codigo' WHERE id_cliente=$id";
 		if (mysqli_query($conn, $sql)) {
 			echo json_encode(array("statusCode" => 200));
 		} else {
