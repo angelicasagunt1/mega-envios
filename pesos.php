@@ -124,5 +124,96 @@ include 'model/transferencias_model.php';
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
+
+
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box bg-danger">
+              <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Efectivo</span>
+                <span class="info-box-number"><?php (calcular_total_banco_mega_envios(5) == 0) ? print "Nada!": print  number_format(calcular_total_banco_mega_envios(5),2,',','.');   ?></span>
+
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                  Ver Reporte
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box bg-info">
+              <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Brubank</span>
+                <span class="info-box-number"><?php (calcular_total_banco_mega_envios(6) == 0) ? print "Nada!": print  number_format(calcular_total_banco_mega_envios(6),2,',','.');  ?></span>
+
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                  Ver Reporte
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box bg-indigo">
+              <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Galicia</span>
+                <span class="info-box-number"><?php (calcular_total_banco_mega_envios(7) == 0) ? print "Nada!": print  number_format(calcular_total_banco_mega_envios(7),2,',','.');   ?></span>
+
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                  Ver Reporte
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box bg-primary">
+              <span class="info-box-icon"><i class="fas fa-comments"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Macro</span>
+                <span class="info-box-number"><?php (calcular_total_banco_mega_envios(8) == 0) ? print "Nada!": print  number_format(calcular_total_banco_mega_envios(8),2,',','.');   ?></span>
+
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                  Ver Reporte
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+
+
         </div>
         <!-- /.row -->

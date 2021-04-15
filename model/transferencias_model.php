@@ -75,4 +75,15 @@ function total()
     return $sth7->fetchColumn();
 }
 
+function calcular_total_banco_mega_envios($banco)
+{
+    $ObjData = new database;
+    $hoy = date("Y-m-d");
+    $sth3 = $ObjData->prepare("SELECT SUM(importe_titular) from transferencias where fecha = :id AND id_medio_pago_cliente = {$banco}");
+    $sth3->bindParam(":id", $hoy);
+    $sth3->execute();
+    return $sth3->fetchColumn();
+
+}
+
 ?>
