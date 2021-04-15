@@ -303,6 +303,8 @@ include 'model/transferencias_model.php';
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
+
+        <!-- col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
@@ -316,11 +318,9 @@ include 'model/transferencias_model.php';
               <a href="#" class="small-box-footer">Ver Reporte <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-
-
-
-
           <!-- ./col -->
+
+          <!-- col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
@@ -334,7 +334,8 @@ include 'model/transferencias_model.php';
               <a href="#" class="small-box-footer">Ver Reporte <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+
+          <!-- col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-warning">
@@ -348,7 +349,8 @@ include 'model/transferencias_model.php';
               <a href="#" class="small-box-footer">Ver Reporte <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+
+          <!-- col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-danger">
@@ -363,6 +365,56 @@ include 'model/transferencias_model.php';
             </div>
           </div>
           <!-- ./col -->
+
+          <!-- col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <div><h2><?php (calcular_total_importe_banco(32) == 0) ? print "Nada!": print  number_format(calcular_total_importe_banco(32),2,',','.'); ?></h2></div>
+                <p>Venezuela</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">Ver Reporte <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          
+          <!-- col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <div><h2><?php (calcular_total_importe_banco(29) == 0) ? print "Nada!": print  number_format(calcular_total_importe_banco(29),2,',','.'); ?></h2></div>
+                <p>Provincial</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">Ver Reporte <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+
+         <!-- col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <div><h2><?php (total() == 0) ? print "Nada!": print  number_format(total(),2,',','.'); ?></h2></div>
+                <p>Total Bolivares</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">Ver Reporte <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+
+
         </div>
         <!-- /.row -->
         <!-- Main row -->

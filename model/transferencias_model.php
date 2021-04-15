@@ -46,9 +46,33 @@ $mercantil = $sth7->fetchColumn();
 
 $sth8 = $ObjData->prepare("SELECT SUM(importe_cliente) from transferencias as a
 inner join cuenta as b on
-a.id_cuenta_destino = b.id_cuenta where a.fecha = :id AND id_tipo_banco NOT IN(1, 2);");
+a.id_cuenta_destino = b.id_cuenta where a.fecha = :id AND id_tipo_banco NOT IN(1, 2, 29, 32);");
 $sth8->bindParam(":id", $hoy);
 $sth8->execute();
 $otros = $sth8->fetchColumn();
+
+function calcular_total_importe_banco($banco)
+{   
+    $ObjData = new database;
+    $hoy = date("Y-m-d");
+    $sth7 = $ObjData->prepare("SELECT SUM(importe_cliente) from transferencias as a
+    inner join cuenta as b on
+    a.id_cuenta_destino = b.id_cuenta where a.fecha = :id AND id_tipo_banco = {$banco};");
+    $sth7->bindParam(":id", $hoy);
+    $sth7->execute();
+    return $sth7->fetchColumn();
+}
+
+function total()
+{   
+    $ObjData = new database;
+    $hoy = date("Y-m-d");
+    $sth7 = $ObjData->prepare("SELECT SUM(importe_cliente) from transferencias as a
+    inner join cuenta as b on
+    a.id_cuenta_destino = b.id_cuenta where a.fecha = :id");
+    $sth7->bindParam(":id", $hoy);
+    $sth7->execute();
+    return $sth7->fetchColumn();
+}
 
 ?>
