@@ -304,21 +304,20 @@ include 'model/transferencias_model.php';
         <!-- Small boxes (Stat box) -->
         <div class="row">
 
-        <!-- col -->
+          <!-- col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <div><h2><?php include 'templates/mercantil.php'?>Bs.</h2></div>
+              <div><h2><?php include 'templates/mercantil.php'?>Bs.</h2></div>
                 <p>Mercantil</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-stats-bars"></i>
               </div>
               <a href="#" class="small-box-footer">Ver Reporte <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
 
           <!-- col -->
           <div class="col-lg-3 col-6">
@@ -421,7 +420,7 @@ include 'model/transferencias_model.php';
         <div class="row">
 
               <!-- =========================================================== -->
-         <iframe align="center" width="100%" height="100px" src="<?='pesos.php';?>" 
+         <iframe align="center" width="100%" height="280px" src="<?='pesos.php';?>" 
   frameborder="no" scrolling="no" name="myIframe" id="myIframe"> </iframe>
 
 
