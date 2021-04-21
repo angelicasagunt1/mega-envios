@@ -48,6 +48,16 @@ if ($banco == "Banesco") {
 	$query .= "AND d.tipo_banco ='" . $_POST["banco"] . "'";
 }
 
+if ($banco == "De Venezuela") {
+     //if (isset($_POST["banco"]) && !empty($_POST["banco"])) {
+          $query .= "AND d.tipo_banco ='" . $_POST["banco"] . "'";
+}
+
+if ($banco == "Provincial") {
+     //if (isset($_POST["banco"]) && !empty($_POST["banco"])) {
+          $query .= "AND d.tipo_banco ='" . $_POST["banco"] . "'";
+}
+
 if (isset($_POST["medio"]) && !empty($_POST["medio"])) {
 	$query .= "AND c.medio_de_pago ='" . $_POST["medio"] . "'";
 }

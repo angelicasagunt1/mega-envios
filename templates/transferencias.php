@@ -110,6 +110,8 @@ tr:nth-child(even) {background-color: #f2f2f2;}
           <option value="">Seleccione el banco</option>
           <option value="Banesco">Banesco</option>
           <option value="Mercantil">Mercantil</option>
+          <option value="Provincial">Provincial</option>
+          <option value="De Venezuela">Venezuela</option>
           <option value="Otros">Otros</option>
         </select>
       </div>
