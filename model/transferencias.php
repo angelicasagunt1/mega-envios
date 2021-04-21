@@ -35,7 +35,7 @@ if (!empty($_POST["fecha_desde"]) && !empty($_POST["fecha_hasta"])) {
 }
 
 if ($banco == "Otros") {
-	$query .= "AND b.id_tipo_banco NOT IN(1, 2);";
+	$query .= "AND b.id_tipo_banco NOT IN(1, 2, 29, 32);";
 }
 
 if ($banco == "Mercantil") {
