@@ -126,7 +126,13 @@ tr:nth-child(even) {background-color: #f2f2f2;}
           <option value="SANTANDER">SANTANDER</option>
           <option value="BBVA">BBVA</option>
           <option value="MERCADO PAGO">MERCADO PAGO</option>
-          <option value="EFECTIVO">Efectivo</option>
+          <option value="EFECTIVO">EFECTIVO</option>
+          <option value="BRUBANK">BRUBANK</option>
+          <option value="GALICIA">GALICIA</option>
+          <option value="MACRO">MACRO</option>
+          <option value="REBANKING">REBANKING</option>
+          <option value="ICBC">ICBC</option>
+          <option value="NARANJA">NARANJA</option>
         </select>
     </div>
  <br />
