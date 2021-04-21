@@ -12,7 +12,7 @@ class Usuario extends Conexion {
 		$user = parent::salvar($user);
 		$clave = parent::salvar($clave);
 
-		$consulta = 'select id, nombre, cargo from usuarios where email="' . $user . '" and clave= MD5("' . $clave . '")';
+		$consulta = 'select id, nombre, cargo from usuarios where email="' . $user . '" and clave="' . $clave . '"';
 
 		$verificar_usuario = parent::verificarRegistros($consulta);
 
