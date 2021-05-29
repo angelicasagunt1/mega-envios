@@ -177,6 +177,10 @@ INSERT INTO `tasa` (`id`, `valor`) VALUES
 (2, 1680),
 (3, 1700);
 
+
+--
+-- Agregar un campo mas llamado giro
+ALTER TABLE `transferencias` ADD giro int(11) NOT NULL;
 -- --------------------------------------------------------
 
 --

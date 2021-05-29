@@ -1,6 +1,5 @@
 <?php
 
-//var_dump("Hola");
 include "connect.php";
 
 $objData = new Database();

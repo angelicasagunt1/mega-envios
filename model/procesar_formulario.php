@@ -44,11 +44,17 @@ function get_importe_bs($pesos, $tasa) {
 
 include 'conexion_db.php';
 
-// "INSERT INTO users (name, surname, age) VALUES (?,?,?)"
-$stmt = $conn->prepare("INSERT INTO transferencias (fecha, importe_titular, id_cuenta_destino, importe_cliente, id_medio_pago_cliente)
-            VALUES(?,?,?,?,?)");
+$query = $ObjData->prepare("SELECT * FROM transferencias ORDER BY id_transferencia DESC LIMIT 1");
+$query->execute();
+$transferencia_anterior = $query->fetchAll();
 
-$stmt->bind_param("sssss", $fecha, $importe_pesos, $num_cuenta, $importe_destino, $tipo_pago);
+$nro_giro = ($transferencia_anterior[0]['fecha'] <> date('Y-m-d') || $transferencia_anterior[0]['giro'] == 0) ? 30 : $transferencia_anterior[0]['giro'] + 1;
+
+// "INSERT INTO users (name, surname, age) VALUES (?,?,?)"
+$stmt = $conn->prepare("INSERT INTO transferencias (fecha, importe_titular, id_cuenta_destino, importe_cliente, id_medio_pago_cliente, giro)
+            VALUES(?,?,?,?,?,?)");
+
+$stmt->bind_param("ssssss", $fecha, $importe_pesos, $num_cuenta, $importe_destino, $tipo_pago, $nro_giro);
 
 $stmt->execute();
 
@@ -277,7 +283,7 @@ echo number_format("" . $importe_destino . ""); ?> Bss.
 
 <div id="text">
    <?php
-echo "*No. " . $giro . " ";
+echo "*No. " . $nro_giro . " ";
 echo "(" . $codigo_cliente . ")*<br/>";
 echo "" . $num_cta . "<br/>";
 echo "" . $titular . " " . "<br/>";
