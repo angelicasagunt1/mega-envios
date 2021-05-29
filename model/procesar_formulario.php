@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 include "../model/connect.php";
 
 //include 'conexion_db.php';
@@ -102,7 +102,7 @@ echo "Cliente No. " . $codigo_cliente . ""; ?> </strong></h5>
 
                   <div>Mega Envíos - Money Transfer</div>
                                        <h5>
-                     <?php date_default_timezone_set('America/Argentina/Buenos_Aires');?>
+                    
 
                     Fecha: <?=date('m/d/y');?> - Hora: <?=date('g:ia');?></h5>
                         </div>
