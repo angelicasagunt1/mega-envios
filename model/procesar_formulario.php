@@ -11,7 +11,7 @@ $sth->bindParam(":id", $id);
 $sth->execute();
 $codigo_cliente = $sth->fetchColumn();
 
-$fecha = date('Y/m/d', time());
+$fecha = date('Y-m-d', time());
 $titular = $_POST['nombre_titular'];
 $apellido_titular = $_POST['Apellido'];
 $cedula = $_POST['cedula'];
